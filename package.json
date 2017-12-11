@@ -1,0 +1,27 @@
+{
+  "name": "constructor-hangman",
+  "version": "1.0.0",
+  "description": "a hangman node app built with constructor functions",
+  "main": "game.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulz92/Constructor-Hangman.git"
+  },
+  "keywords": [
+    "hangman",
+    "node",
+    "constructor"
+  ],
+  "author": "Paul Zavattieri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paulz92/Constructor-Hangman/issues"
+  },
+  "homepage": "https://github.com/paulz92/Constructor-Hangman#readme",
+  "dependencies": {
+    "inquirer": "^4.0.1"
+  }
+}
