@@ -5,7 +5,7 @@ var hangman = {
 	inquirer: require("inquirer"),
 	randomWord: require("random-word"),
 
-	// creating word, blank word, wrong guess, and already guessed arrays
+	// creating empty word string, blank word/wrong guess/already guessed arrays
 	word: "",
 	blankWord: [],
 	wrongGuess: [],
@@ -15,7 +15,7 @@ var hangman = {
 	alphabet: ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n",
 		 "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"],
 
-	// random word function
+	// new word function
   newWord: function() {
 		hangman.word = hangman.randomWord().toLowerCase();
 		// filling blank word array with _. length of array = length of random word
@@ -24,7 +24,9 @@ var hangman = {
 		};
 		// logging for testing purposes
 		console.log(hangman.word);
-		console.log(hangman.blankWord);
+		console.log("Word: " + hangman.blankWord.join(" "));
+		console.log("---------------------------------------------------------");
+		// start guessing
 		hangman.guess();
 	},
 
@@ -32,8 +34,8 @@ var hangman = {
 		// log blank word, wrong guesses, already guessed, wrong guesses left
 		console.log("Word: " + hangman.blankWord.join(" "));
 		console.log("Wrong guesses: " + hangman.wrongGuess.join(" "));
-		console.log("Already guessed: " + hangman.alreadyGuessed.join(" "));
 		console.log("Wrong guesses left: " + (10 - hangman.wrongGuess.length));
+		console.log("--------------------------------------------------------");
 	},
 
 	// play again function
