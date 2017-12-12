@@ -15,6 +15,10 @@ var hangman = {
 	alphabet: ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n",
 		 "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"],
 
+	// wins and losses
+	wins: 0,
+	losses: 0,
+
 	// new word function
   newWord: function() {
 		hangman.word = hangman.randomWord().toLowerCase();
@@ -38,6 +42,11 @@ var hangman = {
 		console.log("--------------------------------------------------------");
 	},
 
+	winsLosses: function() {
+		console.log("Wins: " + hangman.wins);
+		console.log("Losses: " + hangman.losses);
+	},
+
 	// play again function
 	playAgain: function() {
 		hangman.inquirer.prompt([
@@ -53,6 +62,9 @@ var hangman = {
 				hangman.blankWord = [];
 				hangman.wrongGuess = [];
 				hangman.alreadyGuessed = [];
+				console.log("--------------------------------------------------------");
+				console.log("Starting new game!");
+				console.log("--------------------------------------------------------");
 				hangman.newWord();
 			}
 		});
@@ -112,14 +124,20 @@ var hangman = {
 			// if user guessed all the letters
 		} else if (hangman.blankWord.indexOf("_") === -1) {
 			console.log("you win");
+			// add 1 to wins
+			hangman.wins++;
 			// print stats, run play again function
 			hangman.printStats();
+			hangman.winsLosses();
 			hangman.playAgain();
 			// if user had 10 wrong guesses
 		} else if (hangman.wrongGuess.length >= 10) {
 			console.log("you lose, the word was '" + hangman.word + "'.");
+			// add 1 to losses
+			hangman.losses++;
 			// print stats, run play again function
 			hangman.printStats();
+			hangman.winsLosses();
 			hangman.playAgain();
 		}
 	}
