@@ -1,4 +1,4 @@
-// object oriented
+// object oriented - NO CONSTRUCTORS
 var hangman = {
 
 	// require inquirer and the random pokemon name npm package
