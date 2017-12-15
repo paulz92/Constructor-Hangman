@@ -12,7 +12,7 @@ To build a hangman app for use on a local machine in Bash using contructor funct
 - [Inquirer NPM package](https://www.npmjs.com/package/inquirer)
 
 ## Features
-Random word generator greatly reduces the likelihood of word repetition, and the words generated tend to be on the difficult side. The app accepts either uppercase or lowercase letters, and will not allow you to input any character not within the english alphabet. The app keeps a running tally of your session's wins and losses, and you will be promped whether or not you'd like to play again after winning/losing the current round. Also, no internet connection is required to play this game after installation.
+Random word generator greatly reduces the likelihood of word repetition, and the words generated tend to be on the difficult side. The app accepts either uppercase or lowercase letters, and will not allow you to input any character not within the english alphabet. The app keeps a running tally of your session's wins and losses, and you will be prompted whether or not you'd like to play again after winning/losing the current round. Also, no internet connection is required to play this game after installation.
 
 ## Installation
 - Install [Node js](https://nodejs.org/en/)
